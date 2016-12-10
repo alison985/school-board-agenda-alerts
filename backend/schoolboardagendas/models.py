@@ -15,7 +15,7 @@ class SchoolDistrict(models.Model):
 	created_at = models.DateTimeField(auto_now_add =True)
 	modified_at = models.DateTimeField(auto_now=True)
 
-class Agendas(models.Model):
+class SchoolBoardAgendas(models.Model):
 	school_district = models.ForeignKey(SchoolDistrict)
 	meeting_at = models.DateTimeField()
 	link_to_agenda = models.TextField()
