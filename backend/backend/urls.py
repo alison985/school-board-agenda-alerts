@@ -20,5 +20,6 @@ from schoolboardagendas.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^agendas/$', SchoolBoardAgendasList.as_view()),
-    url(r'^agendas/(?P<pk>[0-9]/$)', SchoolBoardAgendasDetail.as_view())
+    url(r'^agendas/location/(?P<city>[a-z])/(?P<state>[a-z])$', SchoolBoardAgendasLocationList.as_view()),
+    url(r'^agendas/(?P<pk>[0-9])/$', SchoolBoardAgendasDetail.as_view())
 ]
