@@ -12,8 +12,8 @@ class SchoolDistrict(models.Model):
 	district_number = models.CharField(max_length=4, null=True)
 	can_parse = models.BooleanField(default=False)
 	ever_matched_keywords = models.BooleanField(default=False)
-	created_at = models.DateTimeField('Created At',auto_add_now=True)
-	modified_at = models.DateTimeField('Modified At',auto_now=True)
+	created_at = models.DateTimeField(auto_now_add =True)
+	modified_at = models.DateTimeField(auto_now=True)
 
 class Agendas(models.Model):
 	school_district = models.ForeignKey(SchoolDistrict)
@@ -21,7 +21,7 @@ class Agendas(models.Model):
 	link_to_agenda = models.TextField()
 	keyword_flag = models.BooleanField()
 	keywords = models.TextField()
-	created_at = models.DateTimeField(auto_add_now=True)
+	created_at = models.DateTimeField(auto_now_add=True)
 	modified_at = models.DateTimeField(auto_now=True)
 
 

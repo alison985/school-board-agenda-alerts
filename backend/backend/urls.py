@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from agendas.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^agendas/$', AgendasList.as_view()),
+    url(r'^agendas/(?P<pk>[0-9]/$)', AgendasDetail.as_view())
 ]
